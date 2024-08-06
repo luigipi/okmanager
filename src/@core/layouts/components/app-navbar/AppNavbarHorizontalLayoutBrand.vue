@@ -6,7 +6,7 @@
           class="navbar-brand"
           to="/"
         >
-          <span class="brand-logo">
+          <span class="brand-logo bg-dark">
             <b-img
               :src="appLogoImage"
               alt="logo"

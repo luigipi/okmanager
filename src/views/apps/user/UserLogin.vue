@@ -2,7 +2,7 @@
   <div class="auth-wrapper auth-v2">
     <b-row class="auth-inner m-0">
       <!-- Brand logo-->
-      <b-link class="brand-logo">
+      <b-link class="brand-logo bg-dark">
         <h2 class="brand-text text-primary ml-1">
           OkPay
         </h2>

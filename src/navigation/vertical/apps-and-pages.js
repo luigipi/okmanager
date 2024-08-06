@@ -34,18 +34,18 @@ export default [
     //   route: 'apps-service-category',
     //   user: false
     // },
-    {
-        title: "Task Templates",
-        icon: "BoxIcon",
-        route: "apps-service-category",
-        user: false,
-    },
-    {
-        title: "Tasks",
-        icon: "PackageIcon",
-        route: "apps-tasks",
-        user: false,
-    },
+    // {
+    //     title: "Task Templates",
+    //     icon: "BoxIcon",
+    //     route: "apps-service-category",
+    //     user: false,
+    // },
+    // {
+    //     title: "Tasks",
+    //     icon: "PackageIcon",
+    //     route: "apps-tasks",
+    //     user: false,
+    // },
     // {
     //   title: 'Feedback & Complains',
     //   icon: 'HeadphonesIcon',
@@ -76,12 +76,12 @@ export default [
         route: "apps-email",
         user: true,
     },
-    {
-        title: "Blogs",
-        icon: "TagIcon",
-        route: "apps-blogs",
-        user: true,
-    },
+    // {
+    //     title: "Blogs",
+    //     icon: "TagIcon",
+    //     route: "apps-blogs",
+    //     user: true,
+    // },
     {
         title: "Support",
         icon: "MessageSquareIcon",

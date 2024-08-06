@@ -90,6 +90,18 @@
             />
           </b-form-group>
         </b-col>
+        <b-col md="4">
+          <b-form-group
+            :label="`Bills Payment Provider -  (${details.bills_payment_provider})`"
+            label-for="mc-bills-provider"
+          >
+            <b-form-select id="mc-bills-provider" name="bills_payment_provider" v-model="details.bills_payment_provider">
+              <b-form-select-option value="">Select</b-form-select-option>
+              <b-form-select-option value="shago">Shago Pay</b-form-select-option>
+              <b-form-select-option value="clubconnect">ClubKonnect</b-form-select-option>
+            </b-form-select>
+          </b-form-group>
+        </b-col>
         <b-col md="12">
           <b-form-group
             label="Account Inactivity Message"
@@ -232,248 +244,12 @@
         </b-col>
       </b-row>
     </b-card>
-
-    <!-- <b-card
-      title="Monnify Settings"
-    >
-      <b-row>
-        <b-col md="6">
-          <b-form-group
-            label="API Key"
-            label-for="mc-api-key"
-          >
-            <b-form-input
-              id="mc-api-key"
-              v-model="details.monnify_apikey"
-              placeholder="API KEY"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="6">
-          <b-form-group
-            label="Contract Code"
-            label-for="mc-contract-code"
-          >
-            <b-form-input
-              id="mc-contract-code"
-              v-model="details.monnify_contract"
-              placeholder="Contract Code"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="6">
-          <b-form-group
-            label="Secret Code"
-            label-for="mc-secret-code"
-          >
-            <b-form-input
-              id="mc-secret-code"
-              v-model="details.monnify_secret"
-              placeholder="Secret Code"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="6">
-          <b-form-group
-            label="Wallet ID (for disbursment)"
-            label-for="mc-wallet-id"
-          >
-            <b-form-input
-              id="mc-wallet-id"
-              v-model="details.monnify_walletId"
-              placeholder="Wallet ID"
-            />
-          </b-form-group>
-        </b-col>
-
-        <b-col>
-          <b-button
-            v-ripple.400="'rgba(255, 255, 255, 0.15)'"
-            type="submit"
-            variant="primary"
-            class="mr-1"
-          >
-            Save
-            <b-spinner
-              v-show="loading"
-              variant="light"
-              small
-            />
-          </b-button>
-        </b-col>
-      </b-row>
-    </b-card> -->
-
-    <!-- <b-card
-      title="Flutterwave Settings"
-    >
-      <b-row>
-        <b-col md="6">
-          <b-form-group
-            label="API Key"
-            label-for="mc-api-key"
-          >
-            <b-form-input
-              id="mc-api-key"
-              v-model="details.flutterwave_apikey"
-              placeholder="API KEY"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="6">
-          <b-form-group
-            label="Secret Key"
-            label-for="mc-secret-code"
-          >
-            <b-form-input
-              id="mc-secret-code"
-              v-model="details.flutterwave_secret"
-              placeholder="Secret Code"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="3">
-          <b-form-group
-            label="Transfer Charge Mini %"
-            label-for="mc-flwv-id"
-          >
-            <b-form-input
-              id="mc-flwv-id"
-              v-model="details.flwv_trans_charge_mini"
-              placeholder="flwv Mini"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="3">
-          <b-form-group
-            label="Transfer Charge Midi %"
-            label-for="mc-flwv-id"
-          >
-            <b-form-input
-              v-model="details.flwv_trans_charge_midi"
-              placeholder="flwv Midi"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="3">
-          <b-form-group
-            label="Transfer Charge Max %"
-            label-for="mc-flwv-id"
-          >
-            <b-form-input
-              id="mc-flwv-id"
-              v-model="details.flwv_trans_charge_max"
-              placeholder="flwv Max"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="3">
-          <b-form-group
-            label="Card Transaction Charge %"
-            label-for="mc-flwv-id"
-          >
-            <b-form-input
-              id="mc-flwv-id"
-              v-model="details.flwv_card_trans_charge"
-              placeholder="Card Transaction Charge"
-            />
-          </b-form-group>
-        </b-col>
-
-        <b-col>
-          <b-button
-            v-ripple.400="'rgba(255, 255, 255, 0.15)'"
-            type="submit"
-            variant="primary"
-            class="mr-1"
-          >
-            Save
-            <b-spinner
-              v-show="loading"
-              variant="light"
-              small
-            />
-          </b-button>
-        </b-col>
-      </b-row>
-    </b-card> -->
-
-    <!-- <b-card
-      title="Capricorn Settings"
-    >
-      <b-row>
-        <b-col md="6">
-          <b-form-group
-            label="API Key"
-            label-for="mc-api-key"
-          >
-            <b-form-input
-              id="mc-api-key"
-              v-model="details.baxi_apikey"
-              placeholder="API KEY"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="6">
-          <b-form-group
-            label="Username"
-            label-for="mc-username"
-          >
-            <b-form-input
-              id="mc-username"
-              v-model="details.baxi_username"
-              placeholder="Username"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="6">
-          <b-form-group
-            label="Secret Code"
-            label-for="mc-secret-code"
-          >
-            <b-form-input
-              id="mc-secret-code"
-              v-model="details.baxi_secret"
-              placeholder="Secret Code"
-            />
-          </b-form-group>
-        </b-col>
-        <b-col md="6">
-          <b-form-group
-            label="Agent ID"
-            label-for="mc-agent-id"
-          >
-            <b-form-input
-              id="mc-agent-id"
-              v-model="details.baxi_agent_id"
-              placeholder="Agent ID"
-            />
-          </b-form-group>
-        </b-col>
-
-        <b-col>
-          <b-button
-            v-ripple.400="'rgba(255, 255, 255, 0.15)'"
-            type="submit"
-            variant="primary"
-            class="mr-1"
-          >
-            Save
-            <b-spinner
-              v-show="loading"
-              variant="light"
-              small
-            />
-          </b-button>
-        </b-col>
-      </b-row>
-    </b-card> -->
   </b-form>
 </template>
 
 <script>
 import {
-  BRow, BCol, BFormGroup, BFormInput, BForm, BButton, BCard, BSpinner, BFormTextarea,
+  BRow, BCol, BFormGroup, BFormInput, BForm, BButton, BCard, BSpinner, BFormTextarea, BFormSelect, BFormSelectOption,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
@@ -490,6 +266,8 @@ export default {
     BCard,
     BSpinner,
     BFormTextarea,
+    BFormSelect,
+    BFormSelectOption,
   },
   directives: {
     Ripple,
@@ -546,6 +324,9 @@ export default {
           this.loading = false
         })
     },
+    setBillPay(event) {
+      this.details.bills_payment_provider = event.target.selected
+    }
   },
 }
 </script>

@@ -47,11 +47,11 @@ export default [
         name: "apps-transactions",
         component: () => import("@/views/apps/transactions/Transactions.vue"),
     },
-    {
-        path: "/apps/safelock/",
-        name: "apps-safelock",
-        component: () => import("@/views/apps/safelock/Safelock.vue"),
-    },
+    // {
+    //     path: "/apps/safelock/",
+    //     name: "apps-safelock",
+    //     component: () => import("@/views/apps/safelock/Safelock.vue"),
+    // },
     {
         path: "/apps/rate-charges/",
         name: "apps-rate-charges",
@@ -59,40 +59,40 @@ export default [
     },
 
     // Categories
-    {
-        path: "/apps/service-category/",
-        name: "apps-service-category",
-        component: () => import("@/views/apps/category/Categories.vue"),
-    },
-    {
-        path: "/apps/service-category/edit/:id",
-        name: "apps-category-edit",
-        component: () => import("@/views/apps/category/EditCategory.vue"),
-    },
+    // {
+    //     path: "/apps/service-category/",
+    //     name: "apps-service-category",
+    //     component: () => import("@/views/apps/category/Categories.vue"),
+    // },
+    // {
+    //     path: "/apps/service-category/edit/:id",
+    //     name: "apps-category-edit",
+    //     component: () => import("@/views/apps/category/EditCategory.vue"),
+    // },
 
     // Services
-    {
-        path: "/apps/services/",
-        name: "apps-services",
-        component: () => import("@/views/apps/category/Services.vue"),
-    },
-    {
-        path: "/apps/services/edit/:id",
-        name: "apps-services-edit",
-        component: () => import("@/views/apps/category/EditService.vue"),
-    },
+    // {
+    //     path: "/apps/services/",
+    //     name: "apps-services",
+    //     component: () => import("@/views/apps/category/Services.vue"),
+    // },
+    // {
+    //     path: "/apps/services/edit/:id",
+    //     name: "apps-services-edit",
+    //     component: () => import("@/views/apps/category/EditService.vue"),
+    // },
 
     // Tasks
-    {
-        path: "/apps/tasks/",
-        name: "apps-tasks",
-        component: () => import("@/views/apps/category/Tasks.vue"),
-    },
-    {
-        path: "/apps/tasks/edit/:id",
-        name: "apps-tasks-edit",
-        component: () => import("@/views/apps/category/EditTask.vue"),
-    },
+    // {
+    //     path: "/apps/tasks/",
+    //     name: "apps-tasks",
+    //     component: () => import("@/views/apps/category/Tasks.vue"),
+    // },
+    // {
+    //     path: "/apps/tasks/edit/:id",
+    //     name: "apps-tasks-edit",
+    //     component: () => import("@/views/apps/category/EditTask.vue"),
+    // },
 
     // Support
     {
@@ -111,11 +111,6 @@ export default [
         component: () => import("@/views/apps/referrals/Referrals.vue"),
     },
     {
-        path: "/apps/epin-requests/",
-        name: "apps-epin-requests",
-        component: () => import("@/views/apps/epin/EPin.vue"),
-    },
-    {
         path: "/apps/Settings/",
         name: "apps-settings",
         component: () => import("@/views/apps/settings/Settings.vue"),
@@ -125,34 +120,34 @@ export default [
         name: "apps-email",
         component: () => import("@/views/apps/settings/Email.vue"),
     },
-    {
-        path: "/apps/blogs/",
-        name: "apps-blogs",
-        component: () => import("@/views/apps/blog/Blogs.vue"),
-    },
-    {
-        path: "/apps/blogs/create/",
-        name: "apps-blogs-create",
-        component: () => import("@/views/apps/blog/BlogsCreate.vue"),
-    },
-    {
-        path: "/apps/blogs/:id",
-        name: "apps-blogs-view",
-        component: () => import("@/views/apps/blog/BlogsView.vue"),
-    },
-    {
-        path: "/apps/blogs/update/:id",
-        name: "apps-blogs-update",
-        component: () => import("@/views/apps/blog/BlogsUpdate.vue"),
-    },
-    {
-        path: "/merchants-all",
-        name: "merchants-all",
-        component: () => import("@/views/apps/user/MerchantManagement.vue"),
-        meta: {
-            layout: "full",
-            resource: "Auth",
-            redirectIfLoggedIn: true,
-        },
-    },
+    // {
+    //     path: "/apps/blogs/",
+    //     name: "apps-blogs",
+    //     component: () => import("@/views/apps/blog/Blogs.vue"),
+    // },
+    // {
+    //     path: "/apps/blogs/create/",
+    //     name: "apps-blogs-create",
+    //     component: () => import("@/views/apps/blog/BlogsCreate.vue"),
+    // },
+    // {
+    //     path: "/apps/blogs/:id",
+    //     name: "apps-blogs-view",
+    //     component: () => import("@/views/apps/blog/BlogsView.vue"),
+    // },
+    // {
+    //     path: "/apps/blogs/update/:id",
+    //     name: "apps-blogs-update",
+    //     component: () => import("@/views/apps/blog/BlogsUpdate.vue"),
+    // },
+    // {
+    //     path: "/merchants-all",
+    //     name: "merchants-all",
+    //     component: () => import("@/views/apps/user/MerchantManagement.vue"),
+    //     meta: {
+    //         layout: "full",
+    //         resource: "Auth",
+    //         redirectIfLoggedIn: true,
+    //     },
+    // },
 ];

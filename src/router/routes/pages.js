@@ -9,16 +9,6 @@ export default [
       action: 'read',
     },
   },
-  // {
-  //   path: '/merchants-all',
-  //   name: 'merchants-all',
-  //   component: () => import('@/views/apps/user/MerchantManagement.vue'),
-  //   meta: {
-  //     layout: 'full',
-  //     resource: 'Auth',
-  //     redirectIfLoggedIn: true,
-  //   },
-  // },
   {
     path: '/user-login',
     name: 'user-login',

@@ -7,7 +7,7 @@
     <b-card-header>
       <b-card-title>Statistics</b-card-title>
       <b-card-text class="font-small-2 mr-25 mb-0">
-        Updated 1 month ago
+        Latest
       </b-card-text>
     </b-card-header>
     <b-card-body class="statistics-body">
@@ -15,7 +15,7 @@
         <b-col
           v-for="(item, index) in data"
           :key="index"
-          xl="3"
+          xl="4"
           sm="6"
           :class="item.customClass +'mb-1'"
           v-b-modal.event-edit-modal

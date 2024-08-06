@@ -15,7 +15,7 @@
           <ecommerce-statistics :data="statisticsItems" /> 
         </b-col>
       </b-row>
-
+ 
       <b-row class="match-height">
         <div class="col-12">
         <div class="card">
@@ -218,24 +218,39 @@ export default {
           subtitle: 'Earners',
           customClass: 'mb-2 mb-sm-0',
         },
-        // {
-        //   icon: 'DollarSignIcon',
-        //   color: 'light-success',
-        //   title: '₦0.00',
-        //   subtitle: 'Revenue',
-        //   customClass: '',
-        // },
+        {
+          icon: 'DollarSignIcon',
+          color: 'light-primary',
+          title: '₦0.00',
+          subtitle: 'Revenue',
+          customClass: '',
+        },
+        {
+          icon: 'DollarSignIcon',
+          color: 'light-success',
+          title: '₦0.00',
+          subtitle: 'Inflow',
+          customClass: '',
+        },
+        {
+          icon: 'DollarSignIcon',
+          color: 'light-danger',
+          title: '₦0.00',
+          subtitle: 'Outflow',
+          customClass: '',
+        },
       ],
       details: {
         name: '',
         saleToday: '0.00',
+        today: '0.00'
       },
     }
   },
   created() {
     this.url = this.$url+'/transactions'
     this.getTransactions()
-    // this.getSettings()
+    this.getSettings()
     // this.getRevenue() 
     let data = localStorage.getItem('userData')
     let user = JSON.parse(data)
@@ -277,12 +292,13 @@ export default {
         .then(response => {
           if(response.data) {            
             this.settings = response.data.data
-            this.statisticsItems[0].title = this.settings.sales_count
+            this.statisticsItems[0].title = this.settings.transactions
             this.statisticsItems[1].title = this.settings.customer_count
-            this.statisticsItems[2].title = this.settings.product_count
+            this.statisticsItems[2].title = this.settings.earners
             this.statisticsItems[3].title = this.settings.revenue
-            this.statisticsItems[4].title = this.settings.cash_position
-            this.details.saleToday = this.settings.sales
+            this.statisticsItems[4].title = this.settings.inflow
+            this.statisticsItems[5].title = this.settings.outflow
+            this.details.saleToday = this.settings.overall
             this.details.today = this.settings.today
           }
         })

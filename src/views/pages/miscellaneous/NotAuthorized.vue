@@ -1,6 +1,6 @@
 <template>
   <div class="misc-wrapper">
-    <b-link class="brand-logo">
+    <b-link class="brand-logo bg-dark">
       <!-- <vuexy-logo /> -->
       <h2 class="brand-text text-primary ml-1">
         OkPay
